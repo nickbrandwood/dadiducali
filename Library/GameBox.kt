@@ -1,6 +1,6 @@
 package Library
 
-public class GameBox(_game: BoardGame) : LibraryItem() {
+public class GameBox(_boardGame: BoardGame) : LibraryItem() {
 
     var boardGame:BoardGame
     override var ean13:String
@@ -10,9 +10,10 @@ public class GameBox(_game: BoardGame) : LibraryItem() {
         }
 
     init {
-        boardGame=_game
+        this.boardGame =_boardGame
+
     }
-    override fun Lend():Int {
+    override fun lend():Int {
         var loans:Int = boardGame.RegisterLoan()
         println("This game has been loaned $loans times.")
         return loans
@@ -21,11 +22,15 @@ public class GameBox(_game: BoardGame) : LibraryItem() {
     override fun matchCode(code:String):Boolean
     {
         var retval :Boolean=false
-        if(code == this.qrCode || code == this.ean13 || code == this.libraryCode)
+        if(code == this.qrCode || code == this.ean13 || code == this.barcode)
         {
             retval=true
         }
         return retval
     }
 
+    override fun tags():Set<Tag>
+    {
+        return Tag.generate(this)
+    }
 }

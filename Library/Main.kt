@@ -1,43 +1,67 @@
 package Library
 
 fun main(args: Array<String>) {
+
+    //create association
     val dadiDucali=Association("Dadi Ducali")
-    var boardGame=BoardGame()
 
-    boardGame.name[Language.IT]="21 Gioghi Minuti"
-    boardGame.minPlayers=1
-    boardGame.maxPlayers=12
-    boardGame.duration=30
-    boardGame.bggId=356999
+    //process csv file
+    val libraryCSV : List<BoardGameItem> = LocalFileStore().readLibraryCSV()
 
-    var gameBox=GameBox(boardGame)
-    gameBox.libraryCode="DD1234"
-    gameBox.ean13="1234567890123"
-    gameBox.qrCode="https://www.dadiducali.it/game/DD1234"
-    dadiDucali.library.add(gameBox)
+    //generate in memory objects
+    for(boardGameItem : BoardGameItem in libraryCSV)
+    {
+        //board game (definition)
+        val boardGame : BoardGame = BoardGame.loadGame(boardGameItem)
 
-    val myGame : LibraryItem? = dadiDucali.library.findByBarcode("1234567890123")
-    if (myGame != null) {
-        println("found item ${myGame.libraryCode}")
-        println("ean13 is ${myGame.ean13}")
-        if(myGame is GameBox)
-        {
-            println("This is a gamebox.")
-            println("the BGG url is ${myGame.boardGame.bggId}")
+        //game box (instance)
+        val gameBox : GameBox = GameBox(boardGame)
 
-        }
-    } else {
-        println("No item found")
+        //set individual barcode
+        gameBox.barcode=boardGameItem.barcode
+
+        //add it to the library
+        dadiDucali.library.items.add(gameBox)
+        println("Game ${gameBox.boardGame.title} (Game ID ${gameBox.boardGame.gameId}) added to library as barcode ${gameBox.barcode}" )
     }
 
-    println("--------------------------------")
+    println("${dadiDucali.library.items.count()} games present in library.")
+    println("-------------------------")
 
-    var bggXML : BoardGameGeekXML = BoardGameGeekXML.fromId("bggID1")
-    println("this is the data:")
-    println(bggXML.boardGameGeekId)
-    println(bggXML.data1)
-    println(bggXML.data2)
-    var bggXML2 : BoardGameGeekXML = BoardGameGeekXML()
-    bggXML2.boardGameGeekId = "bggID2"
+    //search for games by barcode tag:
+    val tag1:Tag =Tag.getTag(TAGTYPE.IDENT,"barcode","DD100")
+    val myGames=
+    displayGames(dadiDucali.library.findByTag(tag1))
+    println("-----------------------------------------------")
 
+    //search for games by bggID tag:
+    val tag2:Tag = Tag.getTag(TAGTYPE.IDENT,"bggId","346101")
+    displayGames(dadiDucali.library.findByTag(tag2))
+    println("-----------------------------------------------")
+
+
+    //search for multiple games by tag:
+
+    println("look for anything including \"Zombie\" in the title")
+    val zombieTags:Set<Tag> =Tag.findTags(TAGTYPE.IDENT,"title","Zombie")
+    println("Tags found ${zombieTags.count()}")
+    val tags:Set<Tag> = zombieTags
+    displayGames(dadiDucali.library.findByTag(tags,FINDMODIFIER.ANY_TAG))
+}
+
+fun displayGames(myGames:Set<LibraryItem>) : Unit {
+    if( myGames.count()==0)
+        println("no games found for tags.")
+
+    else {
+            for(myGame in myGames){
+            if(myGame is GameBox)
+            {
+                println("++")
+                println("item ${myGame.barcode} is a gamebox.")
+                println("the game is ${myGame.boardGame.title}")
+                println("tags:${Tag.generate(myGame)}")
+            }
+        }
+    }
 }

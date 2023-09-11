@@ -1,28 +1,29 @@
 package Library
 
+enum class FINDMODIFIER
+{
+    ANY_TAG,
+    ALL_TAGS
+}
+
 class LibraryList {
 
-    private var items = mutableSetOf<LibraryItem>()
+    var items = mutableSetOf<LibraryItem>()
 
-
-    public fun add(item:LibraryItem)
+    public fun findByTag(tags:Set<Tag>,logic:FINDMODIFIER) : Set<LibraryItem>
     {
-        items.add(item)
-    }
-
-    public fun findByBarcode(code:String) : LibraryItem?
-    {
-        var retval: LibraryItem? = null
-        for(item in items)
-        {
-            if(item.matchCode(code))
-            {
-                retval = item
-                break
-            }
-
+        val retVal = when (logic){
+            FINDMODIFIER.ANY_TAG ->  items.filter{org.apache.commons.collections4.CollectionUtils.containsAny(it.tags(),tags)}.toSet()
+            FINDMODIFIER.ALL_TAGS -> items.filter{it.tags().containsAll(tags)}.toSet()
         }
-        return retval
+        return retVal
+
     }
+    public fun findByTag(tag:Tag) : Set<LibraryItem>
+    {
+        return items.filter{it.tags().contains(tag)}.toSet()
+
+    }
+
 
 }

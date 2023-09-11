@@ -4,28 +4,21 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc9f73ca-6322-40c2-a910-1cde109c41b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Association.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/BoardGame.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/BoardGameGeekXML.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Enums.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Event.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/GameBox.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/LibraryItem.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/LibraryList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/SME.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/User.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bc9f73ca-6322-40c2-a910-1cde109c41b4" name="Changes" comment="first step of building objects">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/apache_commons_collections4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/apache_commons_csv.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/LocalFileStore.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Tag.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/library.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dadiducali.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dadiducali.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameLibrary/GameBox.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helloWorld/helloWorld.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/BoardGame.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/BoardGame.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/GameBox.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/GameBox.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/LibraryItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LibraryItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/LibraryList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LibraryList.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/.idea/dadiducali.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/.idea/dadiducali.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/dadiducali/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/META-INF/dadiducali.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/META-INF/dadiducali.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/helloWorld/HelloWorldKt.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +38,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.0/kotlin-stdlib-common-1.9.0-sources.jar!/generated/_Collections.kt" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="KotlinCodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -58,6 +57,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
@@ -65,10 +68,10 @@
     "cidr.known.project.marker": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.kotlinCompiler"
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -113,6 +116,14 @@
       <option name="presentableId" value="Default" />
       <updated>1694128001835</updated>
     </task>
+    <task id="LOCAL-00001" summary="first step of building objects">
+      <created>1694200497760</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694200497760</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,5 +148,20 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first step of building objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="first step of building objects" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/Library/BoardGame.kt</url>
+          <line>23</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
