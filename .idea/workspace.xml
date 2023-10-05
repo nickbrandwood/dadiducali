@@ -4,21 +4,30 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc9f73ca-6322-40c2-a910-1cde109c41b4" name="Changes" comment="first step of building objects">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/apache_commons_collections4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/apache_commons_csv.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/LocalFileStore.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Tag.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/library.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dadiducali.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dadiducali.iml" afterDir="false" />
+    <list default="true" id="bc9f73ca-6322-40c2-a910-1cde109c41b4" name="Changes" comment="added out folder">
+      <change afterPath="$PROJECT_DIR$/CLIManager/Interface.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/BoardGame.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/BoardGame.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/GameBox.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/GameBox.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LibraryItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LibraryItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/BoardGameGeekXML.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/BoardGameGeekXML.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/LibraryList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LibraryList.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/LocalFileStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LocalFileStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Tag.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Tag.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/library.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CLIManager/library.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/dadiducali/.idea/dadiducali.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/.idea/dadiducali.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/dadiducali/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/Library/BoardGame$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/Library/BoardGame$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/Library/BoardGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/Library/BoardGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/Library/BoardGameGeekXML$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/Library/BoardGameGeekXML.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/Library/BoardGameGeekXML.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/Library/BoardGameItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/Library/BoardGameItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/Library/LibraryList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/Library/LibraryList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/Library/LocalFileStore$readLibraryCSV$transform$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/Library/LocalFileStore$readLibraryCSV$transform$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/Library/LocalFileStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/Library/LocalFileStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/Library/MainKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/Library/Tag$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/Library/Tag$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/Library/library.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dadiducali/META-INF/dadiducali.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dadiducali/META-INF/dadiducali.kotlin_module" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +38,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Kotlin File" />
         <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -65,18 +74,22 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TODO_SCOPE": "All Places",
     "cidr.known.project.marker": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
+    "settings.editor.selected.configurable": "preferences.language.Kotlin"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nickb\Documents\GitHub\dadiducali\dadiducali\CLIManager" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="tests" />
@@ -85,9 +98,16 @@
       <recent name="Library" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="Kotlin.InterfaceKt">
     <configuration name="HelloWorldKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="helloWorld.HelloWorldKt" />
+      <module name="dadiducali" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InterfaceKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CLIManager.InterfaceKt" />
       <module name="dadiducali" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -102,6 +122,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.InterfaceKt" />
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Kotlin.HelloWorldKt" />
       </list>
@@ -123,7 +144,21 @@
       <option name="project" value="LOCAL" />
       <updated>1694200497760</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="basic searching by tag. some warnings and todo  to look at.">
+      <created>1694469914357</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694469914357</updated>
+    </task>
+    <task id="LOCAL-00003" summary="basic searching by tag. some warnings and todo  to look at.">
+      <created>1694469957341</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694469957341</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,7 +172,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -151,7 +186,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first step of building objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="first step of building objects" />
+    <MESSAGE value="basic searching by tag. some warnings and todo  to look at." />
+    <option name="LAST_COMMIT_MESSAGE" value="basic searching by tag. some warnings and todo  to look at." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -160,6 +196,11 @@
           <url>file://$PROJECT_DIR$/Library/BoardGame.kt</url>
           <line>23</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/Library/Tag.kt</url>
+          <line>63</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

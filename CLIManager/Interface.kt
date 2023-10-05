@@ -1,9 +1,17 @@
-package Library
+package CLIManager
+
+import Library.Association
+import Library.BoardGame
+import Library.BoardGameItem
+import Library.GameBox
+import Library.LibraryItem
+import Library.LocalFileStore
+import Library.Tag
 
 fun main(args: Array<String>) {
 
     //create association
-    val dadiDucali=Association("Dadi Ducali")
+    val dadiDucali= Association("Dadi Ducali")
 
     //process csv file
     val libraryCSV : List<BoardGameItem> = LocalFileStore().readLibraryCSV()
@@ -22,15 +30,17 @@ fun main(args: Array<String>) {
 
         //add it to the library
         dadiDucali.library.items.add(gameBox)
-        println("Game ${gameBox.boardGame.title} (Game ID ${gameBox.boardGame.gameId}) added to library as barcode ${gameBox.barcode}" )
+        //println("Game ${gameBox.boardGame.title} (Game ID ${gameBox.boardGame.gameId}) added to library as barcode ${gameBox.barcode}" )
     }
 
+
+
+    /*
     println("${dadiDucali.library.items.count()} games present in library.")
     println("-------------------------")
 
     //search for games by barcode tag:
     val tag1:Tag =Tag.getTag(TAGTYPE.IDENT,"barcode","DD100")
-    val myGames=
     displayGames(dadiDucali.library.findByTag(tag1))
     println("-----------------------------------------------")
 
@@ -47,6 +57,9 @@ fun main(args: Array<String>) {
     println("Tags found ${zombieTags.count()}")
     val tags:Set<Tag> = zombieTags
     displayGames(dadiDucali.library.findByTag(tags,FINDMODIFIER.ANY_TAG))
+
+ */
+
 }
 
 fun displayGames(myGames:Set<LibraryItem>) : Unit {
@@ -54,7 +67,7 @@ fun displayGames(myGames:Set<LibraryItem>) : Unit {
         println("no games found for tags.")
 
     else {
-            for(myGame in myGames){
+        for(myGame in myGames){
             if(myGame is GameBox)
             {
                 println("++")

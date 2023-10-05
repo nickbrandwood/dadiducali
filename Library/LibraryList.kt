@@ -22,7 +22,6 @@ class LibraryList {
     public fun findByTag(tag:Tag) : Set<LibraryItem>
     {
         return items.filter{it.tags().contains(tag)}.toSet()
-
     }
 
 

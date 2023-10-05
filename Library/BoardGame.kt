@@ -21,9 +21,26 @@ class BoardGame {
             var boardGame=BoardGame()
             boardGame.bggId=boardGameItem.bggId
             boardGame.title=boardGameItem.title
-            var players = boardGameItem.players.split(",").toList()
-            boardGame.minPlayers=3 //TODO Parse CSV values
-            boardGame.maxPlayers=5 //TODO Parse CSV values
+            var players = boardGameItem.players.split(",","-").toList()
+            for(player in players)
+            {
+                var playerNumber=player.trim().toIntOrNull()
+                if(playerNumber!=null)
+                {
+                    boardGame.addPlayerNumber(playerNumber)
+                }
+                if(player.contains(("+")))
+                {
+                   var playerNumber=player.replace("+","").trim().toIntOrNull()
+                    boardGame.addPlayerNumber(playerNumber)
+                    boardGame.maxPlayers=12 //max number managed.
+                }
+
+            }
+            if(boardGame.minPlayers==0 && boardGameItem.players!="")
+                println("game players not recognised: ${boardGameItem.players}")
+            else
+                println("players from ${boardGame.minPlayers} to ${boardGame.maxPlayers}")
            /* boardGame.duration=boardGameItem.minutes.toInt() */
             boardGame.gameId= addToCatalog(boardGame)
             return boardGame
@@ -50,6 +67,14 @@ class BoardGame {
             return catalog.firstOrNull {game -> game.title==title}
         }
 
+    }
+
+    private fun addPlayerNumber(playerNumber: Int?) : Unit{
+        if(playerNumber!=null)
+        {
+            if(minPlayers==0 || minPlayers>playerNumber) minPlayers=playerNumber
+            if(maxPlayers==0 || maxPlayers<playerNumber) maxPlayers=playerNumber
+        }
     }
 
     var gameId:Int = 0

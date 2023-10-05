@@ -30,7 +30,7 @@ class Tag private constructor(val tagType: TAGTYPE, val tagName: String, val tag
                 // not there, create it
                 val tag:Tag = Tag(type,name,value)
                 catalog.add(tag)
-                println("Tag ${catalog.count()} created ${tag}")
+                //println("Tag ${catalog.count()} created ${tag}")
                 return tag
             }
             //return existing tag
